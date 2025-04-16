@@ -8,6 +8,8 @@
   <script defer src="script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <!-- Lightbox2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -27,15 +29,35 @@
       <h1>Welcome to RASRIC</h1>
     </section>
 
-    <section id="portfolio" class="gallery-section">
-      <h2>Portfolio</h2>
-      <div class="tabs">
-        <!-- Tabs auto-generated in script.js -->
-      </div>
-      <div class="gallery" id="gallery">
-        <!-- Gallery auto-generated in script.js -->
-      </div>
-    </section>
+ <!-- Portfolio Section -->
+<section id="portfolio">
+  <h2>🖼️ PORTFOLIO</h2>
+
+  <div class="sub-gallery">
+    <h3>PAST COMMISSIONED MURALS</h3>
+    <div class="gallery">
+      <a href="images/commission1.jpg" data-lightbox="commissioned" data-title="Mural 1">
+        <img src="images/commission1_thumb.jpg" alt="Mural 1" />
+      </a>
+      <a href="images/commission2.jpg" data-lightbox="commissioned" data-title="Mural 2">
+        <img src="images/commission2_thumb.jpg" alt="Mural 2" />
+      </a>
+    </div>
+  </div>
+
+  <div class="sub-gallery">
+    <h3>PERSONAL MURALS</h3>
+    <div class="gallery">
+      <a href="images/personal1.jpg" data-lightbox="personal" data-title="Personal Mural 1">
+        <img src="images/personal1_thumb.jpg" alt="Personal Mural 1" />
+      </a>
+      <a href="images/personal2.jpg" data-lightbox="personal" data-title="Personal Mural 2">
+        <img src="images/personal2_thumb.jpg" alt="Personal Mural 2" />
+      </a>
+    </div>
+  </div>
+</section>
+
 
     <section id="shop" class="gallery-section">
       <h2>Shop</h2>
@@ -60,5 +82,8 @@
   <footer>
     <p>&copy; 2025 RASRIC Murals & Creative. All rights reserved.</p>
   </footer>
+  <!-- Lightbox2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+
 </body>
 </html>
