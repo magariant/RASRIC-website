@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RASRIC</title>
-
-  <!-- Custom Fonts -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RASRIC Art</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Swiper.js CSS for Carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <style>
     @font-face {
       font-family: 'HillHouseMedium';
@@ -16,17 +17,11 @@
       src: url('https://raw.githubusercontent.com/magariant/font/c99d631ab24fba94f06b54d9aeea4b5a14b539a5/NouveauRegular-9BAy.ttf') format('truetype');
     }
   </style>
-
-  <!-- Swiper.js CSS for Carousel -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Navigation -->
   <nav>
-    <div class="logo">RASRIC</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="logo">RASRIC Art</div>
     <ul class="menu">
       <li><a href="#home">Home</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
@@ -36,62 +31,71 @@
   </nav>
 
   <!-- Home Section -->
-  <section id="home">
-    <h2>Welcome to RASRIC</h2>
+  <section id="home" class="full-page">
+    <div class="hero-text">
+      <h1>RASRIC Art</h1>
+      <p>Where creativity meets inspiration.</p>
+    </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://drive.google.com/uc?export=view&id=1PLzdqxzjXTruLYKmj6pHAQ9p-WZLDRkb" alt="Home Gallery 1">
-        </div>
+        <div class="swiper-slide"><img src="https://drive.google.com/uc?export=view&id=1PLzdqxzjXTruLYKmj6pHAQ9p-WZLDRkb" alt="Home Image 1"></div>
         <!-- Add more slides as needed -->
       </div>
       <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
     </div>
   </section>
 
   <!-- Portfolio Section -->
   <section id="portfolio">
     <h2>Portfolio</h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://drive.google.com/uc?export=view&id=1VwdKKmMfcpLZYTW97QNk9-e8w1YPXm3q" alt="Commissioned Murals">
+    <div class="tabs">
+      <button data-tab="commissioned-murals">Commissioned Murals</button>
+      <button data-tab="personal-murals">Personal Murals</button>
+      <button data-tab="paintings">Paintings</button>
+      <button data-tab="drawings">Drawings & Illustrations</button>
+      <button data-tab="multimedia">Multimedia</button>
+      <button data-tab="photography-people">Photography - People</button>
+      <button data-tab="photography-places">Photography - Places</button>
+      <button data-tab="photography-things">Photography - Things</button>
+    </div>
+    <div class="tab-content">
+      <div id="commissioned-murals" class="tab-pane">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://drive.google.com/uc?export=view&id=1VwdKKmMfcpLZYTW97QNk9-e8w1YPXm3q" alt="Commissioned Murals"></div>
+            <!-- More images -->
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://drive.google.com/uc?export=view&id=14ch7iZB2JQqAFKNZpondLx_scZiH7VVA" alt="Personal Murals">
-        </div>
-        <div class="swiper-slide">
-          <img src="https://drive.google.com/uc?export=view&id=1kWXNG-EUuMP2vofkZ3NTagrYD2htmr16" alt="Paintings">
-        </div>
-        <!-- Add more slides as needed -->
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <!-- Add other tabs with similar structure -->
     </div>
   </section>
 
   <!-- Shop Section -->
   <section id="shop">
     <h2>Shop</h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://drive.google.com/uc?export=view&id=1GIecCmERWEfjaE4_uBNTK-tmFT3dGIdN" alt="Prints">
-        </div>
-        <div class="swiper-slide">
-          <img src="https://drive.google.com/uc?export=view&id=1P9NfQJbCk8yYQZt4SZ1W3MKZdt3CcQKk" alt="Originals">
-        </div>
-        <div class="swiper-slide">
-          <img src="https://drive.google.com/uc?export=view&id=1IpgEhoj2BIQwHfhApzjOOzkfOaL4Opim" alt="Books">
+    <div class="tabs">
+      <button data-tab="prints">Prints</button>
+      <button data-tab="originals">Originals</button>
+      <button data-tab="books">Books</button>
+    </div>
+    <div class="tab-content">
+      <div id="prints" class="tab-pane">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://drive.google.com/uc?export=view&id=1GIecCmERWEfjaE4_uBNTK-tmFT3dGIdN" alt="Prints">
+              <button class="add-to-cart" data-item="Prints">Add to Cart</button>
+            </div>
+            <!-- More images -->
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <!-- Add other shop tabs with similar structure -->
     </div>
+    <button id="checkout">Checkout</button>
   </section>
 
   <!-- Contact Section -->
@@ -103,10 +107,9 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 RASRIC. All rights reserved.</p>
+    <p>&copy; 2025 RASRIC Art. All rights reserved.</p>
   </footer>
 
-  <!-- Swiper.js Script -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
