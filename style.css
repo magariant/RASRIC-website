@@ -1,9 +1,12 @@
+/* General Styles */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'HillHouseMedium', cursive;
   margin: 0;
   padding: 0;
   background: #f8f8f8;
-  color: #333;
+  color: #222;
+  line-height: 1.6;
+  text-transform: uppercase;
 }
 
 header {
@@ -12,32 +15,72 @@ header {
   text-align: center;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
+header h1 {
+  color: #fff;
+  font-size: 3rem;
   font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #333;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6f61;
 }
 
 section {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin: auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
   text-align: center;
+  font-family: 'HillHouseMedium', cursive;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #444;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
+  padding: 1rem;
 }
 
 .gallery img {
   width: 100%;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .tabs {
@@ -53,31 +96,87 @@ h1, h2 {
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tab:hover {
+  background: #ff6f61;
+  color: #fff;
 }
 
 .shop-item {
   text-align: center;
   margin-bottom: 2rem;
+  font-family: 'HillHouseMedium', cursive;
 }
 
 .shop-item img {
   width: 250px;
   border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 button.buy-now, button.add-to-cart {
   margin: 10px 5px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   background: #222;
   color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'HillHouseMedium', cursive;
   cursor: pointer;
   border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  .tabs {
+button.buy-now:hover, button.add-to-cart:hover {
+  background: #ff6f61;
+  transform: scale(1.1);
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+footer a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  nav {
     flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin-bottom: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  button.buy-now, button.add-to-cart {
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
 }
