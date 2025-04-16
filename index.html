@@ -3,87 +3,273 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RASRIC Creative</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet" />
-  <!-- Lightbox2 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+  <title>RASRIC</title>
+
+  <!-- Mackintosh-Inspired Font -->
+  <style>
+    @font-face {
+      font-family: 'HillHouseMedium';
+      src: url('https://raw.githubusercontent.com/magariant/font/c99d631ab24fba94f06b54d9aeea4b5a14b539a5/HillHouseMedium-Eaqy8.ttf') format('truetype');
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'HillHouseMedium', cursive;
+      color: #222;
+      background: #fff;
+      line-height: 1.8;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background: #000;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 2.5rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav .menu {
+      display: none;
+    }
+
+    nav .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      nav .menu-toggle {
+        display: block;
+      }
+
+      nav .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background: #000;
+        padding: 10px 20px;
+        border-radius: 8px;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      nav .menu a {
+        padding: 10px 0;
+        font-size: 1.2rem;
+        color: #fff;
+        border-bottom: 1px solid #444;
+        width: 100%;
+        text-align: left;
+      }
+
+      nav .menu a:last-child {
+        border-bottom: none;
+      }
+
+      nav .menu.active {
+        display: flex;
+      }
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .sub-gallery {
+      margin-bottom: 40px;
+    }
+
+    .sub-gallery h3 {
+      font-size: 2rem; /* Increased font size for sub-gallery headings */
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    footer {
+      background: #f8f8f8;
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #ddd;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .socials {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .socials a {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+    }
+
+    .socials svg {
+      fill: #222;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#shop">SHOP</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section id="home">
-      <h1>Welcome to RASRIC</h1>
-    </section>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">RASRIC</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
- <!-- Portfolio Section -->
-<section id="portfolio">
-  <h2>🖼️ PORTFOLIO</h2>
-
-  <div class="sub-gallery">
-    <h3>PAST COMMISSIONED MURALS</h3>
-    <div class="gallery">
-      <a href="images/commission1.jpg" data-lightbox="commissioned" data-title="Mural 1">
-        <img src="images/commission1_thumb.jpg" alt="Mural 1" />
-      </a>
-      <a href="images/commission2.jpg" data-lightbox="commissioned" data-title="Mural 2">
-        <img src="images/commission2_thumb.jpg" alt="Mural 2" />
-      </a>
-    </div>
-  </div>
-
-  <div class="sub-gallery">
-    <h3>PERSONAL MURALS</h3>
-    <div class="gallery">
-      <a href="images/personal1.jpg" data-lightbox="personal" data-title="Personal Mural 1">
-        <img src="images/personal1_thumb.jpg" alt="Personal Mural 1" />
-      </a>
-      <a href="images/personal2.jpg" data-lightbox="personal" data-title="Personal Mural 2">
-        <img src="images/personal2_thumb.jpg" alt="Personal Mural 2" />
-      </a>
-    </div>
-  </div>
-</section>
-
-
-    <section id="shop" class="gallery-section">
-      <h2>Shop</h2>
-      <div class="gallery" id="shop-gallery">
-        <!-- Shop gallery auto-generated in script.js -->
+  <!-- Home Gallery Section -->
+  <section id="home" style="padding: 0; margin: 0;">
+    <div class="iframely-embed">
+      <div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;">
+        <a href="https://photos.google.com/share/AF1QipP6qjqw4Yo3FvhalEvVVarOJtrKrrwDpHgeNVZDumOJ8d9gzByVD7hgO5urMyWN-g?key=bERuZTAzUzlxTEwzREZhNWFDbmxkdVA0TmpnS1N3" data-iframely-url="//iframely.net/VbZXaMB"></a>
       </div>
-    </section>
+    </div>
+    <script async src="//iframely.net/embed.js"></script>
+  </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>RASRIC is a collective of muralists and visual artists who create bold, colorful, and surreal work to spark joy, conversation, and transformation. We’re professional but not too serious — unless you're asking for Comic Sans (then we're serious). Let's make something beautiful together.</p>
-    </section>
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>🖼️ PORTFOLIO</h2>
+    <div class="sub-gallery">
+      <h3>PAST COMMISSIONED MURALS</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum1"></iframe>
+    </div>
+    <div class="sub-gallery">
+      <h3>PERSONAL MURALS</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum2"></iframe>
+    </div>
+    <div class="sub-gallery">
+      <h3>CANVAS PAINTINGS</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum3"></iframe>
+    </div>
+    <div class="sub-gallery">
+      <h3>DRAWINGS & ILLUSTRATIONS</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum4"></iframe>
+    </div>
+    <div class="sub-gallery">
+      <h3>MULTIMEDIA ARTWORK</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum5"></iframe>
+    </div>
+    <div class="sub-gallery">
+      <h3>PHOTOGRAPHY – PEOPLE</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum6"></iframe>
+    </div>
+    <div class="sub-gallery">
+      <h3>PHOTOGRAPHY – PLACES</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum7"></iframe>
+    </div>
+    <div class="sub-gallery">
+      <h3>PHOTOGRAPHY – THINGS</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum8"></iframe>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email us at <a href="mailto:rasric.art@gmail.com">rasric.art@gmail.com</a></p>
-      <p>Follow us on Instagram: <a href="https://instagram.com/ras_ric">@ras_ric</a></p>
-      <p>Looking for a quote for a mural or commissioned piece? Drop us a line — we’d love to bring your vision to life!</p>
-    </section>
-  </main>
+  <!-- Shop Section -->
+  <section id="shop">
+    <h2>🛍️ SHOP</h2>
+    <div class="sub-gallery">
+      <h3>PRINTS FOR SALE</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum9"></iframe>
+    </div>
+    <div class="sub-gallery">
+      <h3>ORIGINAL ARTWORK FOR SALE</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum10"></iframe>
+    </div>
+    <div class="sub-gallery">
+      <h3>STICKERS</h3>
+      <iframe src="https://photos.app.goo.gl/yourAlbum11"></iframe>
+    </div>
+  </section>
 
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>CONTACT</h2>
+    <p>EMAIL: <a href="mailto:rasric.art@gmail.com">rasric.art@gmail.com</a></p>
+    <p>PHONE: <a href="tel:+15104205890">(510) 420-5890</a></p>
+    <p>FOR MURAL COMMISSIONS OR CUSTOM ARTWORK QUOTES, PLEASE REACH OUT DIRECTLY VIA EMAIL OR PHONE.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/rasric" target="_blank" aria-label="INSTAGRAM">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5zM4.5 7.75A3.25 3.25 0 0 1 7.75 4.5h8.5a3.25 3.25 0 0 1 3.25 3.25v8.5a3.25 3.25 0 0 1-3.25 3.25h-8.5A3.25 3.25 0 0 1 4.5 16.25v-8.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.5-.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 RASRIC Murals & Creative. All rights reserved.</p>
+    <p>&copy; 2025 RASRIC.</p>
+    <p>ALL RIGHTS RESERVED.</p>
   </footer>
-  <!-- Lightbox2 JS -->
-<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
