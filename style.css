@@ -1,1 +1,83 @@
-body { font-family: 'HillHouseMedium'; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #333;
+}
+
+header {
+  background: #222;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: #eee;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.shop-item {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.shop-item img {
+  width: 250px;
+  border-radius: 12px;
+}
+
+button.buy-now, button.add-to-cart {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
+  }
+}
