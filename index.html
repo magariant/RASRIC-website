@@ -43,21 +43,38 @@
   <!-- Portfolio Section -->
   <section id="portfolio" class="animate-slide-in">
     <h2>Portfolio</h2>
-    <div id="portfolio-gallery" class="gallery"></div>
+    <div class="tabs">
+      <button class="tab-button" onclick="switchTab('portfolio-murals')">Murals</button>
+      <button class="tab-button" onclick="switchTab('portfolio-paintings')">Paintings</button>
+      <button class="tab-button" onclick="switchTab('portfolio-designs')">Designs</button>
+    </div>
+    <div id="portfolio-murals" class="tab-content">
+      <div id="portfolio-gallery-murals" class="gallery"></div>
+    </div>
+    <div id="portfolio-paintings" class="tab-content hidden">
+      <div id="portfolio-gallery-paintings" class="gallery"></div>
+    </div>
+    <div id="portfolio-designs" class="tab-content hidden">
+      <div id="portfolio-gallery-designs" class="gallery"></div>
+    </div>
   </section>
 
   <!-- Shop Section -->
   <section id="shop" class="animate-fade-in">
     <h2>Prints, Originals & Books</h2>
-    <p>Select items to purchase below. Use the PayPal buttons to complete your order securely.</p>
-
-    <div class="shop-item">
-      <img src="https://via.placeholder.com/400x300" alt="Artwork Title">
-      <p><strong>Title:</strong> Sample Print<br>
-         <strong>Size:</strong> 12x18 inches<br>
-         <strong>Medium:</strong> Giclée Print</p>
-      <button class="paypal-button">Add to Cart</button>
-      <button class="paypal-button">Buy Now</button>
+    <div class="tabs">
+      <button class="tab-button" onclick="switchTab('shop-prints')">Prints</button>
+      <button class="tab-button" onclick="switchTab('shop-originals')">Originals</button>
+      <button class="tab-button" onclick="switchTab('shop-books')">Books</button>
+    </div>
+    <div id="shop-prints" class="tab-content">
+      <div id="shop-gallery-prints" class="gallery"></div>
+    </div>
+    <div id="shop-originals" class="tab-content hidden">
+      <div id="shop-gallery-originals" class="gallery"></div>
+    </div>
+    <div id="shop-books" class="tab-content hidden">
+      <div id="shop-gallery-books" class="gallery"></div>
     </div>
   </section>
 
