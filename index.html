@@ -8,68 +8,72 @@
 </head>
 <body>
   <!-- Header Section -->
-  <header>
+  <header class="animate-fade-in">
     <h1>RASRIC</h1>
   </header>
 
   <!-- Navigation -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#shop">Shop</a>
-    <a href="#contact">Contact</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
-  <!-- Home Gallery Section -->
-  <section id="home">
+  <!-- Home Section -->
+  <section id="home" class="animate-slide-in">
     <h2>Welcome to RASRIC</h2>
-    <iframe src="https://drive.google.com/embeddedfolderview?id=1PLzdqxzjXTruLYKmj6pHAQ9p-WZLDRkb#grid" width="100%" height="600"></iframe>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="gallery">
-      <div class="sub-gallery">
-        <h3>Commissioned Murals</h3>
-        <iframe src="https://drive.google.com/embeddedfolderview?id=1VwdKKmMfcpLZYTW97QNk9-e8w1YPXm3q#grid" width="100%" height="600"></iframe>
-      </div>
-      <div class="sub-gallery">
-        <h3>Personal Murals</h3>
-        <iframe src="https://drive.google.com/embeddedfolderview?id=14ch7iZB2JQqAFKNZpondLx_scZiH7VVA#grid" width="100%" height="600"></iframe>
-      </div>
-      <div class="sub-gallery">
-        <h3>Paintings</h3>
-        <iframe src="https://drive.google.com/embeddedfolderview?id=1kWXNG-EUuMP2vofkZ3NTagrYD2htmr16#grid" width="100%" height="600"></iframe>
-      </div>
+    <div id="gallery" class="gallery">
+      <p>Loading home gallery...</p>
     </div>
   </section>
 
+  <!-- About Section -->
+  <section id="about" class="animate-fade-in">
+    <h2>ABOUT</h2>
+    <p>
+      RASRIC is the independent studio of Oakland-based muralist, painter, and designer Tom Magarian. Specializing in vibrant, surreal imagery, RASRIC creates large-scale public artworks that fuse bold perspectives with intricate details.
+    </p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="animate-slide-in">
+    <h2>Portfolio</h2>
+    <div id="portfolio-gallery" class="gallery"></div>
+  </section>
+
   <!-- Shop Section -->
-  <section id="shop">
-    <h2>Shop</h2>
-    <div class="gallery">
-      <div class="sub-gallery">
-        <h3>Prints</h3>
-        <iframe src="https://drive.google.com/embeddedfolderview?id=1GIecCmERWEfjaE4_uBNTK-tmFT3dGIdN#grid" width="100%" height="600"></iframe>
-      </div>
-      <div class="sub-gallery">
-        <h3>Originals</h3>
-        <iframe src="https://drive.google.com/embeddedfolderview?id=1P9NfQJbCk8yYQZt4SZ1W3MKZdt3CcQKk#grid" width="100%" height="600"></iframe>
-      </div>
+  <section id="shop" class="animate-fade-in">
+    <h2>Prints, Originals & Books</h2>
+    <p>Select items to purchase below. Use the PayPal buttons to complete your order securely.</p>
+
+    <div class="shop-item">
+      <img src="https://via.placeholder.com/400x300" alt="Artwork Title">
+      <p><strong>Title:</strong> Sample Print<br>
+         <strong>Size:</strong> 12x18 inches<br>
+         <strong>Medium:</strong> Giclée Print</p>
+      <button class="paypal-button">Add to Cart</button>
+      <button class="paypal-button">Buy Now</button>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:rasric.art@gmail.com">rasric.art@gmail.com</a></p>
-    <p>Phone: <a href="tel:+15104205890">(510) 420-5890</a></p>
-    <p>Follow us on Instagram: <a href="https://www.instagram.com/rasric" target="_blank">Instagram</a></p>
+  <section id="contact" class="animate-slide-in">
+    <h2>Get in Touch</h2>
+    <p>Questions, quotes, or commissions? Let’s make something awesome together.</p>
+    <ul>
+      <li>Email: <a href="mailto:rasric.art@gmail.com">rasric.art@gmail.com</a></li>
+      <li>Instagram: <a href="https://instagram.com/ras_ric" target="_blank">@ras_ric</a></li>
+      <li>Phone: 1 (510) 420 5890</li>
+    </ul>
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="animate-fade-in">
     <p>&copy; 2025 RASRIC. All rights reserved.</p>
   </footer>
 
