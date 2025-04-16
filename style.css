@@ -16,130 +16,35 @@ header {
   color: white;
 }
 
-header h1 {
-  font-size: 3rem;
-  animation: fade-in 2s ease-in-out;
-  font-family: 'HillHouseMedium', cursive;
-}
-
-nav {
-  background: #333;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.tabs {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  color: white;
-}
-
-nav .menu {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-nav .menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'HillHouseMedium', cursive;
-}
-
-nav .menu a:hover {
-  color: #ff6f61;
-}
-
-nav .menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-section {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-  font-family: 'HillHouseMedium', cursive;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-.gallery img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #222;
+.tab-button {
+  padding: 0.5rem 1rem;
+  background: #333;
   color: white;
-  animation: fade-in 2s ease-in-out;
-  font-family: 'HillHouseMedium', cursive;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
-/* Animations */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.tab-button:hover {
+  background: #ff6f61;
 }
 
-@keyframes slide-in {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.tab-content {
+  display: none;
 }
 
-.animate-fade-in {
-  animation: fade-in 2s ease-in-out;
+.tab-content:not(.hidden) {
+  display: block;
 }
 
-.animate-slide-in {
-  animation: slide-in 1s ease-in-out;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav .menu {
-    display: none;
-    flex-direction: column;
-    background: #333;
-    width: 100%;
-    position: absolute;
-    top: 4rem;
-    left: 0;
-  }
-
-  nav .menu.active {
-    display: flex;
-  }
-
-  nav .menu-toggle {
-    display: block;
-  }
+/* Hidden Class */
+.hidden {
+  display: none;
 }
