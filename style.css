@@ -1,3 +1,19 @@
+/* Load the HillHouseMedium Font */
+@font-face {
+  font-family: 'HillHouseMedium';
+  src: url('./fonts/HillHouseMedium-Eaqy8.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Load the NouveauRegular Font */
+@font-face {
+  font-family: 'NouveauRegular';
+  src: url('./fonts/NouveauRegular-9BAy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* General Styles */
 body {
   font-family: 'HillHouseMedium', cursive;
@@ -9,42 +25,11 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  background: #222;
-  padding: 1rem;
-  text-align: center;
-  color: white;
-}
-
-.tabs {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.tab-button {
-  padding: 0.5rem 1rem;
-  background: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
+/* Site Title / Logo Style */
+header h1 {
+  font-family: 'NouveauRegular', cursive;
+  font-size: 3rem;
   text-transform: uppercase;
-}
-
-.tab-button:hover {
-  background: #ff6f61;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content:not(.hidden) {
-  display: block;
-}
-
-/* Hidden Class */
-.hidden {
-  display: none;
+  letter-spacing: 0.1rem;
+  color: white;
 }
