@@ -19,6 +19,7 @@ header {
 header h1 {
   font-size: 3rem;
   animation: fade-in 2s ease-in-out;
+  font-family: 'HillHouseMedium', cursive;
 }
 
 nav {
@@ -45,6 +46,7 @@ nav .menu a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-family: 'HillHouseMedium', cursive;
 }
 
 nav .menu a:hover {
@@ -61,6 +63,7 @@ section {
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
+  font-family: 'HillHouseMedium', cursive;
 }
 
 .gallery {
@@ -88,6 +91,7 @@ footer {
   background: #222;
   color: white;
   animation: fade-in 2s ease-in-out;
+  font-family: 'HillHouseMedium', cursive;
 }
 
 /* Animations */
