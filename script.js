@@ -1,0 +1,1 @@
+console.log('Gallery loading from Google Drive...');
