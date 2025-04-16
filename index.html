@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RASRIC</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Custom Fonts -->
+  <style>
+    @font-face {
+      font-family: 'HillHouseMedium';
+      src: url('https://raw.githubusercontent.com/magariant/font/c99d631ab24fba94f06b54d9aeea4b5a14b539a5/HillHouseMedium-Eaqy8.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'NouveauRegular';
+      src: url('https://raw.githubusercontent.com/magariant/font/c99d631ab24fba94f06b54d9aeea4b5a14b539a5/NouveauRegular-9BAy.ttf') format('truetype');
+    }
+  </style>
+
+  <!-- Swiper.js CSS for Carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="animate-fade-in">
-    <h1>RASRIC</h1>
-  </header>
-
   <!-- Navigation -->
   <nav>
+    <div class="logo">RASRIC</div>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <ul class="menu">
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#shop">Shop</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -25,96 +36,78 @@
   </nav>
 
   <!-- Home Section -->
-  <section id="home" class="animate-slide-in">
+  <section id="home">
     <h2>Welcome to RASRIC</h2>
-    <div id="gallery" class="gallery">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1PLzdqxzjXTruLYKmj6pHAQ9p-WZLDRkb#grid" width="100%" height="600" frameborder="0"></iframe>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://drive.google.com/uc?export=view&id=1PLzdqxzjXTruLYKmj6pHAQ9p-WZLDRkb" alt="Home Gallery 1">
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="animate-fade-in">
-    <h2>ABOUT</h2>
-    <p>
-      RASRIC is the independent studio of Oakland-based muralist, painter, and designer Tom Magarian. Specializing in vibrant, surreal imagery, RASRIC creates large-scale public artworks that fuse bold perspectives with intricate details.
-    </p>
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="animate-slide-in">
+  <section id="portfolio">
     <h2>Portfolio</h2>
-    <div class="tabs">
-      <button class="tab-button" onclick="switchTab('portfolio-commissioned-murals')">Commissioned Murals</button>
-      <button class="tab-button" onclick="switchTab('portfolio-personal-murals')">Personal Murals</button>
-      <button class="tab-button" onclick="switchTab('portfolio-paintings')">Paintings</button>
-      <button class="tab-button" onclick="switchTab('portfolio-drawings')">Drawings & Illustrations</button>
-      <button class="tab-button" onclick="switchTab('portfolio-multimedia')">Multimedia</button>
-      <button class="tab-button" onclick="switchTab('portfolio-photography-people')">Photography - People</button>
-      <button class="tab-button" onclick="switchTab('portfolio-photography-places')">Photography - Places</button>
-      <button class="tab-button" onclick="switchTab('portfolio-photography-things')">Photography - Things</button>
-    </div>
-    <div id="portfolio-commissioned-murals" class="tab-content">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1VwdKKmMfcpLZYTW97QNk9-e8w1YPXm3q#grid" width="100%" height="600" frameborder="0"></iframe>
-    </div>
-    <div id="portfolio-personal-murals" class="tab-content hidden">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=14ch7iZB2JQqAFKNZpondLx_scZiH7VVA#grid" width="100%" height="600" frameborder="0"></iframe>
-    </div>
-    <div id="portfolio-paintings" class="tab-content hidden">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1kWXNG-EUuMP2vofkZ3NTagrYD2htmr16#grid" width="100%" height="600" frameborder="0"></iframe>
-    </div>
-    <div id="portfolio-drawings" class="tab-content hidden">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=123bvQOOHO9UPp0yTcrqNP1rTyMTMCFHs#grid" width="100%" height="600" frameborder="0"></iframe>
-    </div>
-    <div id="portfolio-multimedia" class="tab-content hidden">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1m1bK7Ntd7mZ8Ag91ZEOR_z_3Uwyfrl2_#grid" width="100%" height="600" frameborder="0"></iframe>
-    </div>
-    <div id="portfolio-photography-people" class="tab-content hidden">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1yIQo0sbjeT7bOu5D1ryeN7og_p7pFkZB#grid" width="100%" height="600" frameborder="0"></iframe>
-    </div>
-    <div id="portfolio-photography-places" class="tab-content hidden">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1Aduz60CbIhbbdJa1fJj9tFX9QvoNC5Us#grid" width="100%" height="600" frameborder="0"></iframe>
-    </div>
-    <div id="portfolio-photography-things" class="tab-content hidden">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1KJiBlOQAmnl4oGht6qQRlz6PIudxn1Gi#grid" width="100%" height="600" frameborder="0"></iframe>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://drive.google.com/uc?export=view&id=1VwdKKmMfcpLZYTW97QNk9-e8w1YPXm3q" alt="Commissioned Murals">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://drive.google.com/uc?export=view&id=14ch7iZB2JQqAFKNZpondLx_scZiH7VVA" alt="Personal Murals">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://drive.google.com/uc?export=view&id=1kWXNG-EUuMP2vofkZ3NTagrYD2htmr16" alt="Paintings">
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
 
   <!-- Shop Section -->
-  <section id="shop" class="animate-fade-in">
-    <h2>Prints, Originals & Books</h2>
-    <div class="tabs">
-      <button class="tab-button" onclick="switchTab('shop-prints')">Prints</button>
-      <button class="tab-button" onclick="switchTab('shop-originals')">Originals</button>
-      <button class="tab-button" onclick="switchTab('shop-books')">Books</button>
-    </div>
-    <div id="shop-prints" class="tab-content">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1GIecCmERWEfjaE4_uBNTK-tmFT3dGIdN#grid" width="100%" height="600" frameborder="0"></iframe>
-    </div>
-    <div id="shop-originals" class="tab-content hidden">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1P9NfQJbCk8yYQZt4SZ1W3MKZdt3CcQKk#grid" width="100%" height="600" frameborder="0"></iframe>
-    </div>
-    <div id="shop-books" class="tab-content hidden">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1IpgEhoj2BIQwHfhApzjOOzkfOaL4Opim#grid" width="100%" height="600" frameborder="0"></iframe>
+  <section id="shop">
+    <h2>Shop</h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://drive.google.com/uc?export=view&id=1GIecCmERWEfjaE4_uBNTK-tmFT3dGIdN" alt="Prints">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://drive.google.com/uc?export=view&id=1P9NfQJbCk8yYQZt4SZ1W3MKZdt3CcQKk" alt="Originals">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://drive.google.com/uc?export=view&id=1IpgEhoj2BIQwHfhApzjOOzkfOaL4Opim" alt="Books">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="animate-slide-in">
-    <h2>Get in Touch</h2>
-    <p>Questions, quotes, or commissions? Let’s make something awesome together.</p>
-    <ul>
-      <li>Email: <a href="mailto:rasric.art@gmail.com">rasric.art@gmail.com</a></li>
-      <li>Instagram: <a href="https://instagram.com/ras_ric" target="_blank">@ras_ric</a></li>
-      <li>Phone: 1 (510) 420 5890</li>
-    </ul>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:rasric.art@gmail.com">rasric.art@gmail.com</a></p>
+    <p>Phone: <a href="tel:+15104205890">(510) 420-5890</a></p>
   </section>
 
   <!-- Footer -->
-  <footer class="animate-fade-in">
+  <footer>
     <p>&copy; 2025 RASRIC. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Swiper.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
