@@ -1,270 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RASRIC</title>
-
-  <!-- Mackintosh-Inspired Font -->
-  <style>
-    @font-face {
-      font-family: 'HillHouseMedium';
-      src: url('https://raw.githubusercontent.com/magariant/font/c99d631ab24fba94f06b54d9aeea4b5a14b539a5/HillHouseMedium-Eaqy8.ttf') format('truetype');
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'HillHouseMedium', cursive;
-      color: #222;
-      background: #fff;
-      line-height: 1.8;
-      font-size: 18px;
-      text-transform: uppercase;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Navigation Bar */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 30px;
-      background: #000;
-      color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav .logo {
-      font-size: 2.5rem;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-    }
-
-    nav ul li a {
-      font-weight: bold;
-      color: #fff;
-    }
-
-    nav .menu {
-      display: none;
-    }
-
-    nav .menu-toggle {
-      display: none;
-      font-size: 2rem;
-      cursor: pointer;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-      }
-
-      nav .menu-toggle {
-        display: block;
-      }
-
-      nav .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        top: 70px;
-        right: 30px;
-        background: #000;
-        padding: 10px 20px;
-        border-radius: 8px;
-        width: 200px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      nav .menu a {
-        padding: 10px 0;
-        font-size: 1.2rem;
-        color: #fff;
-        border-bottom: 1px solid #444;
-        width: 100%;
-        text-align: left;
-      }
-
-      nav .menu a:last-child {
-        border-bottom: none;
-      }
-
-      nav .menu.active {
-        display: flex;
-      }
-    }
-
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    .sub-gallery {
-      margin-bottom: 40px;
-    }
-
-    .sub-gallery h3 {
-      font-size: 2rem; /* Increased font size for sub-gallery headings */
-      margin-bottom: 15px;
-    }
-
-    .contact p {
-      max-width: 600px;
-      margin: auto;
-    }
-
-    footer {
-      background: #f8f8f8;
-      text-align: center;
-      padding: 30px;
-      border-top: 1px solid #ddd;
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    .socials {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .socials a {
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-    }
-
-    .socials svg {
-      fill: #222;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header Section -->
+  <header>
+    <h1>RASRIC</h1>
+  </header>
 
   <!-- Navigation -->
   <nav>
-    <div class="logo">RASRIC</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <ul class="menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#shop">Shop</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#home">Home</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <!-- Home Gallery Section -->
-  <section id="home" style="padding: 0; margin: 0;">
+  <section id="home">
+    <h2>Welcome to RASRIC</h2>
     <iframe src="https://drive.google.com/embeddedfolderview?id=1PLzdqxzjXTruLYKmj6pHAQ9p-WZLDRkb#grid" width="100%" height="600"></iframe>
   </section>
 
   <!-- Portfolio Section -->
   <section id="portfolio">
-    <h2>🖼️ PORTFOLIO</h2>
-    <div class="sub-gallery">
-      <h3>PAST COMMISSIONED MURALS</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1VwdKKmMfcpLZYTW97QNk9-e8w1YPXm3q#grid" width="100%" height="600"></iframe>
-    </div>
-    <div class="sub-gallery">
-      <h3>PERSONAL MURALS</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=14ch7iZB2JQqAFKNZpondLx_scZiH7VVA#grid" width="100%" height="600"></iframe>
-    </div>
-    <div class="sub-gallery">
-      <h3>CANVAS PAINTINGS</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1kWXNG-EUuMP2vofkZ3NTagrYD2htmr16#grid" width="100%" height="600"></iframe>
-    </div>
-    <div class="sub-gallery">
-      <h3>DRAWINGS & ILLUSTRATIONS</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=123bvQOOHO9UPp0yTcrqNP1rTyMTMCFHs#grid" width="100%" height="600"></iframe>
-    </div>
-    <div class="sub-gallery">
-      <h3>MULTIMEDIA ARTWORK</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1m1bK7Ntd7mZ8Ag91ZEOR_z_3Uwyfrl2_#grid" width="100%" height="600"></iframe>
-    </div>
-    <div class="sub-gallery">
-      <h3>PHOTOGRAPHY – PEOPLE</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1yIQo0sbjeT7bOu5D1ryeN7og_p7pFkZB#grid" width="100%" height="600"></iframe>
-    </div>
-    <div class="sub-gallery">
-      <h3>PHOTOGRAPHY – PLACES</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1Aduz60CbIhbbdJa1fJj9tFX9QvoNC5Us#grid" width="100%" height="600"></iframe>
-    </div>
-    <div class="sub-gallery">
-      <h3>PHOTOGRAPHY – THINGS</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1KJiBlOQAmnl4oGht6qQRlz6PIudxn1Gi#grid" width="100%" height="600"></iframe>
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <div class="sub-gallery">
+        <h3>Commissioned Murals</h3>
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1VwdKKmMfcpLZYTW97QNk9-e8w1YPXm3q#grid" width="100%" height="600"></iframe>
+      </div>
+      <div class="sub-gallery">
+        <h3>Personal Murals</h3>
+        <iframe src="https://drive.google.com/embeddedfolderview?id=14ch7iZB2JQqAFKNZpondLx_scZiH7VVA#grid" width="100%" height="600"></iframe>
+      </div>
+      <div class="sub-gallery">
+        <h3>Paintings</h3>
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1kWXNG-EUuMP2vofkZ3NTagrYD2htmr16#grid" width="100%" height="600"></iframe>
+      </div>
     </div>
   </section>
 
   <!-- Shop Section -->
   <section id="shop">
-    <h2>🛍️ SHOP</h2>
-    <div class="sub-gallery">
-      <h3>PRINTS FOR SALE</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1GIecCmERWEfjaE4_uBNTK-tmFT3dGIdN#grid" width="100%" height="600"></iframe>
-    </div>
-    <div class="sub-gallery">
-      <h3>ORIGINAL ARTWORK FOR SALE</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1P9NfQJbCk8yYQZt4SZ1W3MKZdt3CcQKk#grid" width="100%" height="600"></iframe>
-    </div>
-    <div class="sub-gallery">
-      <h3>STICKERS</h3>
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1IpgEhoj2BIQwHfhApzjOOzkfOaL4Opim#grid" width="100%" height="600"></iframe>
+    <h2>Shop</h2>
+    <div class="gallery">
+      <div class="sub-gallery">
+        <h3>Prints</h3>
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1GIecCmERWEfjaE4_uBNTK-tmFT3dGIdN#grid" width="100%" height="600"></iframe>
+      </div>
+      <div class="sub-gallery">
+        <h3>Originals</h3>
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1P9NfQJbCk8yYQZt4SZ1W3MKZdt3CcQKk#grid" width="100%" height="600"></iframe>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>CONTACT</h2>
-    <p>EMAIL: <a href="mailto:rasric.art@gmail.com">rasric.art@gmail.com</a></p>
-    <p>PHONE: <a href="tel:+15104205890">(510) 420-5890</a></p>
-    <p>FOR MURAL COMMISSIONS OR CUSTOM ARTWORK QUOTES, PLEASE REACH OUT DIRECTLY VIA EMAIL OR PHONE.</p>
-    <div class="socials">
-      <a href="https://www.instagram.com/rasric" target="_blank" aria-label="INSTAGRAM">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5zM4.5 7.75A3.25 3.25 0 0 1 7.75 4.5h8.5a3.25 3.25 0 0 1 3.25 3.25v8.5a3.25 3.25 0 0 1-3.25 3.25h-8.5A3.25 3.25 0 0 1 4.5 16.25v-8.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.5-.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z"/>
-        </svg>
-      </a>
-    </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:rasric.art@gmail.com">rasric.art@gmail.com</a></p>
+    <p>Phone: <a href="tel:+15104205890">(510) 420-5890</a></p>
+    <p>Follow us on Instagram: <a href="https://www.instagram.com/rasric" target="_blank">Instagram</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 RASRIC.</p>
-    <p>ALL RIGHTS RESERVED.</p>
+    <p>&copy; 2025 RASRIC. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Menu Toggle -->
-  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.classList.toggle('active');
-    }
-  </script>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
